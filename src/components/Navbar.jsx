@@ -1,12 +1,15 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import {Link, NavLink} from "react-router-dom";
 import { assets } from '../assets/assets';
 import './Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faBasketShopping } from '@fortawesome/free-solid-svg-icons'
+import { StoreContext } from '../context/StoreContext';
 
+export default function Navbar({setShowLogin}) {
+  
+  const {itemCount} = useContext(StoreContext);
 
-export default function Navbar() {
   return (
     <header>
         <div className='logo'><img src={assets.logo} alt="" /></div>
@@ -15,9 +18,15 @@ export default function Navbar() {
         <NavLink className='nav-link'   to="/food">Food</NavLink>
         <NavLink className='nav-link'  to="/contact">Contact</NavLink>
     </nav>
-    <div className="nav-card-icon"><FontAwesomeIcon className='Basket-count' icon={faBasketShopping} />
-    <p className='card-item-count'>2</p>
+    <NavLink to="/cart"> 
+    <div className="nav-card-icon">
+       <FontAwesomeIcon className='Basket-count' icon={faBasketShopping} />
+       <p className='card-item-count'>{itemCount}</p>
   	</div>
+    </NavLink>
+    
+    <button onClick={()=>{ setShowLogin(true) }}>Sign In</button>
+
     </header>
 
   )

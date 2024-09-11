@@ -11,7 +11,6 @@ import roll from './roll.jpg'
 import roll1 from './roll1.jpg'
 import roll2 from './roll2.jpg'
 import roll3 from './roll3.jpg'
-import roll4 from './roll4.jpg'
 
 import noodles from './noodles.jpg'
 import noodles1 from './noodles1.jpg'
@@ -151,7 +150,7 @@ export const food_list = [
     {
         _id: "9",
         name: "Tomato Roll",
-        image: roll4,
+        image: roll2,
         price: 15,
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, ab?",
         category: "Roll"
