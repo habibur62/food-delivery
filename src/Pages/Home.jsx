@@ -1,11 +1,26 @@
-import React from 'react'
+import React,{useState} from 'react'
+import './Home.css'
+import ExploreMenu from '../components/ExploreMenu'
+import FoodDisplay from '../components/FoodDisplay/FoodDisplay';
 
 export default function Home() {
+
+  const [category, setCategory] = useState("All");
+
   return (
-    <div>
-        <h2>Home Page</h2>
-        <p>Lorem ipsum dolor sit 
-            amet consectetur adipisicing elit. Alias explicabo porro iure cumque. Praesentium, quasi consequuntur. Fuga assumenda atque commodi eaque nobis, natus iure adipisci autem, saepe alias veritatis impedit eos consequuntur aperiam beatae hic similique ad laboriosam! Deserunt non fuga nisi similique in soluta placeat amet sed? Eligendi ex assumenda non similique accusantium quaerat tempora repellat. Aliquam obcaecati magnam eligendi quaerat veritatis, nam magni vel repellendus eius, maiores doloribus ipsa. Ducimus reiciendis soluta laborum libero, dicta eos doloremque minima ex laudantium veritatis, eligendi quo perspiciatis, porro neque eveniet rerum facere amet placeat vitae recusandae magni voluptate vero? Quos, ad.</p>
-    </div>
+    <>
+  <section className='header'>
+        <div className="header-content">
+          <h2>Order your favorite food here</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, magni enim voluptatem esse sun4
+            t molestias? Accusamus quam cupiditate sunt, placeat error nulla unde, fuga voluptas asperiores ex sed explicabo? Facere rem iste fugiat numquam, inventore tempora repellat nisi sapiente soluta voluptatem officia, qua
+            s enim possimus corporis blanditiis veniam quis mollitia.</p>
+          <button>View Menu</button>
+        </div>
+    </section>
+    <ExploreMenu category={category} setCategory={setCategory} /> 
+    <FoodDisplay category={category} />
+    </>
+  
   )
 }
