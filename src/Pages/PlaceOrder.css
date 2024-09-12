@@ -1,0 +1,28 @@
+.place-order{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: start;
+    margin: 100px 0px;
+
+}
+.place-order-left{
+    width: 100%;
+    max-width: max(40%, 500px);
+}
+.place-order-left input{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 359px;
+}
+.place-order-left .multi-fields{
+    display: flex;
+    gap: 10px;
+    width: 250px;
+
+}
+.place-order-right{
+    width: 100%;
+    max-width: max(40%, 500px);
+}
